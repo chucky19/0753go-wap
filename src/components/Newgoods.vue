@@ -2,23 +2,20 @@
   <div class="newgoods">
     <h2>{{ hotdata.tit }}</h2>
     <el-row>
-        <el-col :span="12" v-for="item in hotdata.items">
-          <div class="grid-content">
-            <a :href="item.url">
-              <img :src="item.imgsrc" width="100%">
-              <em class="item-name">{{ item.title }}</em>
-              <span class="item-price" style="color:#ff3c6e"><span class="yen">¥</span>{{ item.price }}</span>
-            </a>
-          </div>
-        </el-col>
+        <goods :goodsdata="hotdata.items"></goods>
     </el-row>
   </div>
 </template>
 
 <script>
+import Goods from './Goods'
+
 export default {
   name: 'newgoods',
-  props: ['hotdata']
+  props: ['hotdata'],
+  components: {
+    Goods
+  }
 }
 </script>
 

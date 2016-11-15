@@ -2,13 +2,10 @@
   <div id="app">
     <p> about page 1</p>
     <el-button @click.native="startHacking">Let's do it</el-button>
-    <hello></hello>
   </div>
 </template>
 
 <script>
-import Hello from './components/Hello'
-
 export default {
   data () {
     return {
@@ -16,9 +13,6 @@ export default {
     }
   },
   name: 'app',
-  components: {
-    Hello
-  },
   methods: {
     startHacking () {
       this.$notify({

@@ -5,7 +5,7 @@
     <navicon></navicon>
     <ad  :addata="ad"></ad>
     <newgoods :hotdata="newgoods"></newgoods>
-    <moregoods tit="更多精彩"></moregoods>
+    <moregoods :hotdata="moregoods"></moregoods>
   </div>
 </template>
 
@@ -15,17 +15,15 @@ import Ban from './components/Ban'
 import Navicon from './components/Navicon'
 import Ad from './components/Ad'
 import Ad2 from './components/Ad2'
-import Ad3 from './components/Ad3'
-import Ad1 from './components/Ad1'
 import Newgoods from './components/Newgoods'
 import Moregoods from './components/Moregoods'
 
 export default {
   name: 'index',
   components: {
-    Headers, Ban, Navicon, Ad, Ad2, Ad3, Ad1, Newgoods, Moregoods
+    Headers, Ban, Navicon, Ad, Ad2, Newgoods, Moregoods
   },
-  data: function () {
+  data () {
     return {
       ad: {
         tit: '热门推荐',
@@ -74,6 +72,37 @@ export default {
           url: 'http://www.0753go.com/mobile/tuangou_detail.php?id=2503',
           title: '颜妹一品香—麻油鸡翅 400g',
           price: '52'
+        },
+        {
+          id: '2471',
+          imgsrc: 'http://www.0753go.com/images/201512/goods_img/2471_G_1450338962270.jpg',
+          url: 'http://www.0753go.com/mobile/tuangou_detail.php?id=2471',
+          title: '卡撒天娇—爱海无际套餐',
+          price: '1999'
+        },
+        {
+          id: '2413',
+          imgsrc: 'http://www.0753go.com/images/201512/goods_img/2413_G_1449195974967.jpg',
+          url: 'http://www.0753go.com/mobile/tuangou_detail.php?id=2471',
+          title: '卡撒天娇—爱海无际套餐',
+          price: '798'
+        },
+        {
+          id: '2411',
+          imgsrc: 'http://www.0753go.com/images/201512/goods_img/2411_G_1449126698121.jpg',
+          url: 'http://www.0753go.com/mobile/tuangou_detail.php?id=2411',
+          title: '美食工坊—黑白巧克力DIY（100g）',
+          price: '48'
+        }]
+      },
+      moregoods: {
+        tit: '更多精彩',
+        items: [{
+          id: '3019',
+          imgsrc: 'http://www.0753go.com/images/201609/source_img/3019_G_1474334928696.jpg',
+          url: 'http://www.0753go.com/mobile/tuangou_detail.php?id=3019',
+          title: '无穷盐焗鸡翅、香辣鸡翅',
+          price: '9.9'
         },
         {
           id: '2471',

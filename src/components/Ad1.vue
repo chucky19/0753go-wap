@@ -1,7 +1,7 @@
 <template>
   <div class="ad1">
     <el-row>
-        <el-col :span="24" v-for="item in ad1data"><div class="grid-content"><a href="/catalog"><img :src="item.imgsrc" alt="广告"></a></div></el-col>
+        <el-col :span="24" v-for="item in addata"><div class="grid-content"><a href="/catalog"><img :src="item.imgsrc" alt="广告"></a></div></el-col>
     </el-row>
   </div>
 </template>
@@ -9,7 +9,7 @@
 <script>
 export default {
   name: 'ad1',
-  props: ['ad1data']
+  props: ['addata']
 }
 </script>
 
