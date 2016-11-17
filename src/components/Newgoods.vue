@@ -2,7 +2,8 @@
   <div class="newgoods">
     <h2>{{ hotdata.tit }}</h2>
     <el-row>
-        <goods :goodsdata="hotdata.items"></goods>
+        <goods v-if="hotdata.items[0]" :goodsdata="hotdata.items"></goods>
+        <div v-else>暂时没有数据哦！</div>
     </el-row>
   </div>
 </template>
